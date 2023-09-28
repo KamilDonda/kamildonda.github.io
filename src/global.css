@@ -1,62 +1,85 @@
+:root {
+  --margin: 150px;
+  --fontSize: 50px;
+}
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-
 body {
   background-color: #222831;
-  color: #DDDDDD;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 50px;
+  color: #dddddd;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: var(--fontSize);
 }
-
 .margin {
-  margin: 0 200px;
+  margin: 0 var(--margin);
 }
-
 .big-space {
   padding-bottom: 100px;
 }
-
 .small-space {
   padding-bottom: 50px;
 }
-
 h1 {
   font-size: 2em;
   font-weight: 400;
 }
-
 h2 {
   font-size: 1.6em;
   font-weight: 500;
 }
-
 .header {
   font-size: 1.6em;
 }
-
 .gold {
-  color: #A6761B;
+  color: #a6761b;
 }
-
+.bg-gold {
+  background-color: #a6761b;
+}
+.gray {
+  color: #888888;
+}
 #photo {
   width: 600px;
   height: 600px;
   border-radius: 50%;
   object-fit: cover;
 }
-
 body::-webkit-scrollbar {
   width: 10px;
 }
- 
 body::-webkit-scrollbar-thumb {
   border-right: 2px solid rgba(0, 0, 0, 0);
   background-clip: padding-box;
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
-
 body::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(0, 0, 0, .8);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 1600px) {
+  :root {
+    --fontSize: 45px;
+    --margin: 125px;
+  }
+}
+@media (max-width: 1400px) {
+  :root {
+    --fontSize: 40px;
+    --margin: 100px;
+  }
+}
+@media (max-width: 1200px) {
+  :root {
+    --fontSize: 35px;
+    --margin: 75px;
+  }
+}
+@media (max-width: 1000px) {
+  :root {
+    --fontSize: 30px;
+    --margin: 50px;
+  }
 }
