@@ -11,7 +11,9 @@ export function Welcome() {
           <span className="header gold">Junior developer</span>
         </div>
       </div>
-      <img id="photo" src={photo} alt="logo" />
+      <div id="welcome-right">
+        <img id="photo" src={photo} alt="logo" />
+      </div>
     </div>
   );
 }
