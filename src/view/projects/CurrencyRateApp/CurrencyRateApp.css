@@ -5,17 +5,10 @@
     max(var(--currency-rate-app-width), var(--currency-rate-app-height)) + 60px
   );
 }
-
 .project-container {
-  /* display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px; */
   display: flex;
 }
 .project-content {
-  /* grid-area: 1 / 1 / 3 / 3; */
   font-size: 0.6rem;
   width: calc(100% - var(--demo-width));
 }
@@ -24,13 +17,21 @@
   flex-direction: column;
   align-items: flex-start;
 }
+.project-title-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 .demo {
-  /* grid-area: 1 / 2 / 2 / 3; */
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   width: var(--demo-width);
-  height: calc(max(var(--currency-rate-app-width), var(--currency-rate-app-height)));
+}
+.demo div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 #currency-rate-app {
   border: none;
@@ -48,4 +49,33 @@
   height: 24px;
   margin: 10px !important;
   color: var(--white);
+}
+#features {
+  width: calc(100% + var(--demo-width));
+}
+@media (max-width: 1600px) {
+  :root {
+    --currency-rate-app-width: 337px;
+    --currency-rate-app-height: 600px;
+  }
+}
+@media (max-width: 1400px) {
+  :root {
+    --currency-rate-app-width: 326px;
+    --currency-rate-app-height: 580px;
+  }
+}
+@media (max-width: 1000px) {
+  .demo {
+    display: none;
+  }
+  .project-content,
+  #features {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .project-content {
+    font-size: 0.8rem;
+  }
 }

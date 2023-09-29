@@ -15,8 +15,18 @@ export function CurrencyRateApp() {
     <div className="project-container">
       <div className="project-content">
         <div className="project-title tiny-space">
-          <h3 className="gold">Currency Rate App</h3>
-          <Button className="button gray">Source code</Button>
+          <div className="project-title-row">
+            <h3 className="gold">Currency Rate App</h3>
+            <Button variant="outlined" className="outlined-button">See a Demo</Button>
+          </div>
+          <Button
+            className="button gray"
+            href="https://github.com/KamilDonda/CurrencyRateApp"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Source code
+          </Button>
         </div>
         <p className="small-space">
           Flutter Android application which shows currency exchange rates.
@@ -38,7 +48,7 @@ export function CurrencyRateApp() {
             </li>
           </ul>
         </div>
-        <div className="project-section">
+        <div id="features" className="project-section">
           <h4 className="gray tiny-space">Features</h4>
           <ul className="tiny-space">
             <li>
@@ -89,12 +99,15 @@ export function CurrencyRateApp() {
         <IconButton onClick={rotateDemo} className="rotate-button">
           <ScreenRotationIcon />
         </IconButton>
-        <iframe
-          id="currency-rate-app"
-          className={vertical ? "vertical" : "horizontal"}
-          src="https://flutter-currency-rate-app.web.app/#/"
-          title="Currency Rate App"
-        ></iframe>
+        <div>
+          <iframe
+            id="currency-rate-app"
+            className={vertical ? "vertical" : "horizontal"}
+            src="https://flutter-currency-rate-app.web.app/#/"
+            title="Currency Rate App"
+          ></iframe>
+          <h4>Working demo</h4>
+        </div>
       </div>
     </div>
   );
