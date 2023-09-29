@@ -1,0 +1,35 @@
+.demo-popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: none;
+  flex-direction: column;
+  z-index: 1;
+}
+.demo-popup-visible {
+  display: flex;
+}
+.demo-popup iframe {
+  height: 100%;
+  width: 100%;
+}
+.background-back-button {
+  background-color: var(--dark);
+}
+.back-button {
+  color: var(--white) !important;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+@media (orientation: landscape) {
+  .demo-popup {
+    flex-direction: row-reverse;
+  }
+  .back-button {
+    display: none;
+  }
+}

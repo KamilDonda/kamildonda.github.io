@@ -105,6 +105,9 @@ ul {
   margin-left: 1rem;
 }
 @media (max-width: 1920px) {
+  :root {
+    --margin: 150px;
+  }
   .margin {
     margin: 0 var(--margin);
   }
@@ -164,12 +167,12 @@ ul {
 }
 @media (max-width: 500px) {
   :root {
-    --fontSize: 17.5px;
+    --fontSize: 19px;
     --space: 30px;
   }
 }
 @media (max-width: 400px) {
   :root {
-    --fontSize: 15px;
+    --fontSize: 18px;
   }
 }
