@@ -117,7 +117,7 @@ export function CurrencyRateApp() {
           </div>
         </div>
         <div className="demo">
-          <IconButton onClick={rotateDemo} className="rotate-button">
+          <IconButton onClick={rotateDemo} className="icon-button">
             <ScreenRotationIcon />
           </IconButton>
           <div>

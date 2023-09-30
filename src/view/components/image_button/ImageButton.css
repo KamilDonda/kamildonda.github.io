@@ -1,0 +1,21 @@
+.image-button {
+  border-radius: 0 !important;
+  height: 100%;
+}
+
+.image-button:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.image-button span {
+  font-size: max(0.35rem, 10px);
+  color: var(--white);
+  font-family: lato;
+  font-weight: 500;
+  padding: 0.2rem;
+}
+
+.image-button svg, .image-button img {
+  margin: 0 !important;
+  width: max(0.5rem, 15px);
+}

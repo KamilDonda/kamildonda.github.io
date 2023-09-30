@@ -1,6 +1,6 @@
 :root {
   --width: calc((100vw - var(--margin) * 2) / 10);
-  --dot: 30px;
+  --dot: 0.6rem;
   --dashed-width: calc(var(--width) * 2 - var(--dot));
 }
 .timeline {
