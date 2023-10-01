@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { useMediaQuery } from "react-responsive";
 import { styled } from "@mui/material/styles";
 import Switch from "@mui/material/Switch";
 import "./DarkModeToggle.css";
+import { ColorScheme } from "../../../utils/ColorScheme";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -52,23 +51,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 }));
 
 export function DarkModeToggle() {
-  const [isDark, setIsDark] = useState(true);
-
-  useEffect(() => {
-    if (isDark) {
-      document.querySelector(":root").classList.add("dark");
-    } else {
-      document.querySelector(":root").classList.remove("dark");
-    }
-  }, [isDark]);
-
-  const systemPrefersDark = useMediaQuery(
-    {
-      query: "(prefers-color-scheme: dark)",
-    },
-    undefined,
-    (isSystemDark) => setIsDark(isSystemDark)
-  );
+  const { isDark, setIsDark } = ColorScheme();
 
   return (
     <div className="toggle">

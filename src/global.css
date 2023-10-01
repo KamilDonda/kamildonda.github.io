@@ -14,13 +14,13 @@
 /* @media (prefers-color-scheme: light) {
   :root {
     --white: #222831;
-    --gold: #a6761b;
-    --gray: #888888;
-    --dark: #dddddd;
+    --gold: #ce9428;
+    --gray: #686868;
+    --dark: #fafafa;
     --button-hover: rgba(0, 0, 0, 0.1);
   }
-} */
-/* @media (prefers-color-scheme: dark) {
+}
+@media (prefers-color-scheme: dark) {
   :root {
     --white: #dddddd;
     --gold: #a6761b;
