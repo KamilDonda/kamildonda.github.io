@@ -2,6 +2,7 @@
   --width: calc((100vw - var(--margin) * 2) / 10);
   --dot: 0.6rem;
   --dashed-width: calc(var(--width) * 2 - var(--dot));
+  --line-size: 2px;
 }
 .timeline {
   display: flex;
@@ -30,7 +31,7 @@
   font-size: 0.8rem;
 }
 .line {
-  border-top: solid 2px var(--white);
+  border-top: solid var(--line-size) var(--white);
   width: calc(var(--width) * 7);
   position: relative;
   bottom: calc(var(--dot) / 2);
@@ -49,7 +50,7 @@
 }
 .dashed-line {
   background-color: var(--white);
-  height: 2px;
+  height: var(--line-size);
   width: calc(var(--dashed-width) / 20);
 }
 .dot {
@@ -60,6 +61,7 @@
 }
 .no-dot {
   height: var(--dot);
+  width: var(--dot);
 }
 .isEmpty {
   background-color: transparent;
@@ -85,4 +87,81 @@
 }
 .description-item:nth-of-type(3n + 3) {
   width: calc(var(--width) * 2);
+}
+
+@media (max-width: 1000px) {
+  :root {
+    --dot: 1rem;
+    --height: 2rem;
+    --dashed-height: calc(var(--height) * 2 - var(--dot));
+    --line-size: 1px;
+  }
+  .timeline {
+    flex-direction: row;
+    margin: 0 10px;
+    justify-content: center;
+  }
+  .timeline-container {
+    flex-direction: column;
+    height: calc(var(--height) * 10);
+  }
+  .timeline-item {
+    height: var(--height);
+    flex-direction: row;
+    width: auto;
+  }
+  .timeline-text {
+    width: 2rem;
+    margin-right: 1rem;
+  }
+  .line {
+    border-left: solid var(--line-size) var(--white);
+    width: var(--line-size);
+    height: calc(var(--height) * 7);
+    margin: 0;
+    top: calc(var(--height) / 2 + var(--dot) / 2);
+    right: calc(var(--dot) / 2 + 1px);
+  }
+  .dashed-container {
+    flex-direction: column;
+    height: var(--dashed-height);
+    width: auto;
+    margin: 0;
+    top: calc(var(--height) / 2 + var(--dot) / 2);
+    right: calc(var(--dot) / 2 + 1px);
+  }
+  .dashed-line {
+    width: var(--line-size);
+    height: calc(var(--dashed-height) / 20);
+  }
+  .description-item {
+    flex-direction: column;
+    justify-content: center;
+    width: auto !important;
+    margin: 0 1rem;
+  }
+  .description-title {
+    font-size: 1em;
+  }
+  .description-text {
+    font-size: 0.8rem;
+  }
+  .description-item:nth-of-type(3n + 3) {
+    height: calc(var(--height) * 3);
+  }
+  .description-item:nth-of-type(3n + 2) {
+    height: calc(var(--height) * 4);
+  }
+  .description-item:nth-of-type(3n + 1) {
+    height: calc(var(--height) * 2);
+  }
+  .timeline-container:last-of-type {
+    justify-content: center;
+  }
+  .timeline-big {
+    font-size: 1.2rem;
+  }
+  .timeline-small {
+    font-size: 1rem;
+  }
 }

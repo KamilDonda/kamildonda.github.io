@@ -1,6 +1,16 @@
 import "./Timeline.css";
+import { useState, useEffect } from "react";
 
-export function HorizontalTimeline() {
+export function Timeline() {
+  const [width, setWidth] = useState(window.innerWidth);
+  console.log(width);
+  const handleResize = () => {
+    setWidth(window.innerWidth);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", handleResize, false);
+  }, []);
+
   const items = [
     { year: 2015, isDot: true },
     { year: 2016 },
@@ -48,13 +58,15 @@ export function HorizontalTimeline() {
     </div>
   ));
 
-  const dashedLine = () => (
-    <div className="dashed-container">
-      {[...Array(10)].map((_, __) => (
-        <div className="dashed-line"></div>
-      ))}
-    </div>
-  );
+  function dashedLine() {
+    return (
+      <div className="dashed-container">
+        {[...Array(10)].map((_, __) => (
+          <div className="dashed-line"></div>
+        ))}
+      </div>
+    );
+  }
 
   const descriptionList = descriptions.map((item) => (
     <div className="description-item">
@@ -63,14 +75,29 @@ export function HorizontalTimeline() {
     </div>
   ));
 
+  var vertical = width < 1000;
+
   return (
     <div className="timeline">
-      <div className="timeline-container">{itemList}</div>
       <div className="timeline-container">
-        <div className="line"></div>
-        {dashedLine()}
+        {vertical ? itemList.reverse() : itemList}
       </div>
-      <div className="timeline-container">{descriptionList}</div>
+      <div className="timeline-container">
+        {vertical ? (
+          <>
+            {dashedLine()}
+            <div className="line"></div>
+          </>
+        ) : (
+          <>
+            <div className="line"></div>
+            {dashedLine()}
+          </>
+        )}
+      </div>
+      <div className="timeline-container">
+        {vertical ? descriptionList.reverse() : descriptionList}
+      </div>
     </div>
   );
 }

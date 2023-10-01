@@ -1,6 +1,6 @@
-import { HorizontalTimeline } from "../../components/timeline/HorizontalTimeline";
+import { Timeline } from "../../components/timeline/Timeline";
 import { Section } from "../Section/Section";
 
 export function Education() {
-  return <Section title="Education" component={<HorizontalTimeline />} />;
+  return <Section title="Education" component={<Timeline />} />;
 }
