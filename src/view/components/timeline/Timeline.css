@@ -30,7 +30,7 @@
   font-size: 0.8rem;
 }
 .line {
-  border-top: solid 2px #dddddd;
+  border-top: solid 2px var(--white);
   width: calc(var(--width) * 7);
   position: relative;
   bottom: calc(var(--dot) / 2);
@@ -48,7 +48,7 @@
   margin-left: calc(var(--dot) / 2);
 }
 .dashed-line {
-  background-color: #dddddd;
+  background-color: var(--white);
   height: 2px;
   width: calc(var(--dashed-width) / 20);
 }
@@ -63,7 +63,7 @@
 }
 .isEmpty {
   background-color: transparent;
-  border: solid calc(var(--dot) / 6) #a6761b;
+  border: solid calc(var(--dot) / 6) var(--gold);
 }
 .description-item {
   display: flex;

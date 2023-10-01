@@ -1,21 +1,7 @@
 import "./ImageButton.css";
 import IconButton from "@mui/material/IconButton";
 
-export function ImageButton({ src, alt, url, text }) {
-  return (
-    <IconButton
-      className="image-button"
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <img src={src} alt={alt} />
-      <span>{text}</span>
-    </IconButton>
-  );
-}
-
-export function ImageIconButton({ icon, url, text }) {
+export function ImageButton({ src, url, text }) {
   return (
     <IconButton
       className="image-button icon-button"
@@ -23,7 +9,7 @@ export function ImageIconButton({ icon, url, text }) {
       target="_blank"
       rel="noopener noreferrer"
     >
-      {icon}
+      {src}
       <span>{text}</span>
     </IconButton>
   );

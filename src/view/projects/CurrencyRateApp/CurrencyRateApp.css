@@ -34,7 +34,7 @@
   text-align: center;
 }
 #currency-rate-app {
-  border: none;
+  border: solid 1px black;
 }
 .vertical {
   height: var(--currency-rate-app-height);
@@ -43,12 +43,6 @@
 .horizontal {
   width: var(--currency-rate-app-height);
   height: var(--currency-rate-app-width);
-}
-.icon-button svg {
-  width: 24px;
-  height: 24px;
-  margin: 10px !important;
-  color: var(--white);
 }
 #features {
   width: calc(100% + var(--demo-width));

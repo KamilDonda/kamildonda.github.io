@@ -1,0 +1,42 @@
+:root {
+  --toggle-scale: 0.9;
+}
+.toggle {
+  transform: scale(var(--toggle-scale));
+  width: min-content;
+  height: min-content;
+  margin-right: -5px;
+}
+@media (max-width: 1200px) {
+  :root {
+    --toggle-scale: 0.8;
+  }
+}
+@media (max-width: 1000px) {
+  :root {
+    --toggle-scale: 0.7;
+  }
+}
+@media (max-width: 700px) {
+  :root {
+    --toggle-scale: 0.5;
+  }
+}
+@media (max-width: 600px) {
+  .toggle {
+    margin-top: -0.5rem;
+  }
+}
+@media (max-width: 350px) {
+  .toggle {
+    margin-top: -0.6rem;
+  }
+}
+@media (max-width: 300px) {
+  :root {
+    --toggle-scale: 0.4;
+  }
+  .toggle {
+    margin-top: -1rem;
+  }
+}
