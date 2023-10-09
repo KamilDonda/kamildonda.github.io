@@ -3,6 +3,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  width: calc(100% - var(--margin) * 2);
+  background-color: var(--dark);
 }
 .nav-row {
   display: flex;

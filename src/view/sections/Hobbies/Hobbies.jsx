@@ -1,14 +1,14 @@
 import { Section } from "../Section/Section";
+import { useTranslation } from "react-i18next";
 
 export function Hobbies() {
+  const { t } = useTranslation();
   return (
     <Section
-      title="Hobbies"
+      title={t("hobbies")}
       component={
         <span>
-          Calisthenics, chess, team sports, IOT, Raspberry Pi, Arduino, DIY,
-          security, movies and series
-          {/* &nbsp; */}
+          {t("hobbies_text")}
         </span>
       }
     />

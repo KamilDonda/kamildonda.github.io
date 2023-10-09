@@ -1,6 +1,8 @@
 import { Timeline } from "../../components/timeline/Timeline";
 import { Section } from "../Section/Section";
+import { useTranslation } from "react-i18next";
 
 export function Education() {
-  return <Section title="Education" component={<Timeline />} />;
+  const { t } = useTranslation();
+  return <Section title={t("education")} component={<Timeline />} />;
 }

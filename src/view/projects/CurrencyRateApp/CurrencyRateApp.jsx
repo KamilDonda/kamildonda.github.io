@@ -4,8 +4,10 @@ import IconButton from "@mui/material/IconButton";
 import ScreenRotationIcon from "@mui/icons-material/ScreenRotation";
 import React, { useState } from "react";
 import { DemoPopup } from "../../components/demo_popup/DemoPopup";
+import { useTranslation } from "react-i18next";
 
 export function CurrencyRateApp() {
+  const { t } = useTranslation();
   const [vertical, setVertical] = useState(true);
   const [demo, setDemo] = useState(false);
 
@@ -16,7 +18,7 @@ export function CurrencyRateApp() {
   function seeDemo() {
     setDemo(!demo);
     console.log(demo);
-  };
+  }
 
   const id = "currency-rate-app";
   const src = "https://flutter-currency-rate-app.web.app/#/";
@@ -24,7 +26,13 @@ export function CurrencyRateApp() {
 
   return (
     <>
-      <DemoPopup id={id} src={src} title={title} demo={demo} onClick={seeDemo}/>
+      <DemoPopup
+        id={id}
+        src={src}
+        title={title}
+        demo={demo}
+        onClick={seeDemo}
+      />
       <div className="project-container">
         <div className="project-content">
           <div className="project-title tiny-space">
@@ -35,7 +43,7 @@ export function CurrencyRateApp() {
                 onClick={seeDemo}
                 className="outlined-button"
               >
-                See a Demo
+                {t("see_a_demo")}
               </Button>
             </div>
             <Button
@@ -44,74 +52,58 @@ export function CurrencyRateApp() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Source code
+              {t("source_code")}
             </Button>
           </div>
-          <p className="small-space">
-            Flutter Android application which shows currency exchange rates.
-          </p>
+          <p className="small-space">{t("currency_rate_app_text")}</p>
           <div className="project-section">
-            <h4 className="gray tiny-space">Views</h4>
-            <p>There are 2 main views in the application:</p>
+            <h4 className="gray tiny-space">{t("views")}</h4>
+            <p>{t("currency_rate_app_views")}</p>
             <ul className="small-space">
+              <li>{t("currency_rate_app_view1")}</li>
               <li>
-                The main view displaying available currencies (USD, EUR, GBP,
-                CHF)
-              </li>
-              <li>
-                Detailed view divided into two sub-views containing data on the
-                last 30 exchange rates:
+                {t("currency_rate_app_view2")}
                 <ul>
-                  <li>List view</li>
-                  <li>Chart view</li>
+                  <li>{t("currency_rate_app_view2_1")}</li>
+                  <li>{t("currency_rate_app_view2_2")}</li>
                 </ul>
               </li>
             </ul>
           </div>
           <div id="features" className="project-section">
-            <h4 className="gray tiny-space">Features</h4>
+            <h4 className="gray tiny-space">{t("features")}</h4>
             <ul className="tiny-space">
               <li>
-                Displaying current<sup>1</sup> exchange rate for 4 currencies.
+                {t("currency_rate_app_features1a")}
+                <sup>1</sup>
+                {t("currency_rate_app_features1b")}
               </li>
               <li>
-                Displaying data for the last 30 days<sup>2</sup>, including:
+                {t("currency_rate_app_features2a")}
+                <sup>2</sup>
+                {t("currency_rate_app_features2b")}
                 <ul>
-                  <li>Date.</li>
-                  <li>Buying rate.</li>
-                  <li>Selling rate.</li>
-                  <li>Daily average rate.</li>
+                  <li>{t("currency_rate_app_features2_1")}</li>
+                  <li>{t("currency_rate_app_features2_2")}</li>
+                  <li>{t("currency_rate_app_features2_3")}</li>
+                  <li>{t("currency_rate_app_features2_4")}</li>
                 </ul>
               </li>
               <li>
-                A chart showing the average daily rate for the last 30 days
+                {t("currency_rate_app_features3")}
                 <sup>2</sup>.
               </li>
-              <li>
-                Highlighting the highest exchange rate in green and the lowest
-                in red.
-              </li>
-              <li>Support for both portrait and landscape orientations.</li>
-              <li>
-                On every application startup, data is fetched and then stored
-                locally. If the device does not have internet connection upon
-                restarting the application, the saved data is displayed and an
-                appropriate message (snackbar) is shown.
-              </li>
-              <li>
-                After reconnection to the internet, data is fetched from the
-                API.
-              </li>
+              <li>{t("currency_rate_app_features4")}</li>
+              <li>{t("currency_rate_app_features5")}</li>
+              <li>{t("currency_rate_app_features6")}</li>
+              <li>{t("currency_rate_app_features7")}</li>
             </ul>
             <ul className="gray tiny-text">
               <p>
-                <sup>1</sup> Data comes from api.nbp.pl. The currently available
-                data is retrieved from the API.
+                <sup>1</sup> {t("currency_rate_app_features_text1")}
               </p>
               <p>
-                <sup>2</sup> The data in the API is not updated daily, but only
-                from Monday to Friday. The application retrieves the last 30
-                available data.
+                <sup>2</sup> {t("currency_rate_app_features_text2")}
               </p>
             </ul>
           </div>
@@ -127,7 +119,7 @@ export function CurrencyRateApp() {
               src={src}
               title={title}
             ></iframe>
-            <h4>Working demo</h4>
+            <h4>{t("working_demo")}</h4>
           </div>
         </div>
       </div>

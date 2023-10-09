@@ -32,7 +32,7 @@ export function Navigation() {
           <LangToggle />
         </div>
       </div>
-      <div className="small-space"></div>
+      <div className="big-space"></div>
     </>
   );
 }

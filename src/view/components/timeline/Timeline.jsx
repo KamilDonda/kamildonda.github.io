@@ -1,7 +1,9 @@
 import "./Timeline.css";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export function Timeline() {
+  const { t } = useTranslation();
   const [width, setWidth] = useState(window.innerWidth);
   console.log(width);
   const handleResize = () => {
@@ -26,16 +28,16 @@ export function Timeline() {
 
   const descriptions = [
     {
-      title: "High School",
-      text: "Stefan Żeromski High School in Dąbrowa Górnicza",
+      title: t("education_high_school"),
+      text: t("education_high_school_text"),
     },
     {
-      title: "Bachelor's degree",
-      text: "Silesian University of Technology",
+      title: t("education_bachelor"),
+      text: t("education_bachelor_text"),
     },
     {
-      title: "Master's degree",
-      text: "Silesian University of Technology",
+      title: t("education_master"),
+      text: t("education_master_text"),
     },
   ];
 
