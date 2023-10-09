@@ -11,8 +11,21 @@ export function LangToggle() {
   const ACTIVE = "lang-toggle-active";
   const INACTIVE = "lang-toggle-inactive";
 
+  const defaultLanguage = () => {
+    const userLocale =
+      navigator.languages && navigator.languages.length
+        ? navigator.languages[0]
+        : navigator.language;
+
+    if (userLocale.includes(PL)) {
+      return PL;
+    } else {
+      return EN;
+    }
+  };
+
   const { i18n } = useTranslation();
-  const [language, setLanguage] = useLanguageState(EN);
+  const [language, setLanguage] = useLanguageState(defaultLanguage());
 
   const switchLanguage = () => {
     const newLanguage = language === EN ? PL : EN;
@@ -24,7 +37,7 @@ export function LangToggle() {
   useEffect(() => {
     document.documentElement.lang = language;
     i18n.changeLanguage(language);
-  }, []);
+  }, [language, i18n]);
 
   const className = (lang) => {
     return language === lang ? ACTIVE : INACTIVE;
