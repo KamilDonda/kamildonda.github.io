@@ -29,19 +29,25 @@ export function LangToggle() {
   const [language, setLanguage] = useLanguageState(defaultLanguage());
 
   const switchLanguage = () => {
-    console.log("switchLanguage: from: " + language);
+    // console.log("switchLanguage: from: " + language);
     const newLanguage = language === EN ? PL : EN;
     setLanguage(newLanguage);
     document.documentElement.lang = newLanguage;
     i18n.changeLanguage(newLanguage);
-    console.log("switchLanguage: to: " + newLanguage);
+    // console.log("switchLanguage: to: " + newLanguage);
   };
 
   window.onload = function () {
     document.documentElement.lang = language;
     i18n.changeLanguage(language);
-    // console.log("useEffect: to: " + language);
+    console.log("onload: to: " + language);
   };
+
+  useEffect(() => {
+    document.documentElement.lang = language;
+    i18n.changeLanguage(language);
+    console.log("useEffect: to: " + language);
+  }, [language, i18n]);
 
   const className = (lang) => {
     return language === lang ? ACTIVE : INACTIVE;
