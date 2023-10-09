@@ -40,7 +40,7 @@ export function LangToggle() {
   window.onload = function () {
     document.documentElement.lang = language;
     i18n.changeLanguage(language);
-    console.log("useEffect: to: " + language);
+    // console.log("useEffect: to: " + language);
   };
 
   const className = (lang) => {
