@@ -1,6 +1,7 @@
 import { useEffect, useMemo } from "react";
 import { useMediaQuery } from "react-responsive";
 import createPersistedState from "use-persisted-state";
+
 const useColorSchemeState = createPersistedState("colorScheme");
 
 export function ColorScheme() {
@@ -19,9 +20,9 @@ export function ColorScheme() {
 
   useEffect(() => {
     if (value) {
-      document.querySelector(":root").classList.add("dark");
+      document.documentElement.classList.add("dark");
     } else {
-      document.querySelector(":root").classList.remove("dark");
+      document.documentElement.classList.remove("dark");
     }
   }, [value]);
 

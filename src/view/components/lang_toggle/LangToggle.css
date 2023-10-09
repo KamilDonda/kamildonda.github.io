@@ -1,0 +1,36 @@
+#lang-toggle {
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  padding: 5px;
+}
+
+#lang-toggle:hover {
+  background-color: var(--button-hover) !important;
+}
+
+#lang-toggle span {
+  padding: 1px;
+  letter-spacing: 1px;
+  line-height: 0.6rem;
+  text-align: center;
+}
+
+.lang-toggle-active {
+  font-size: 0.5rem;
+  font-weight: 500;
+  color: var(--gold);
+  width: 0.6rem;
+}
+
+.lang-toggle-inactive {
+  font-size: 0.425rem;
+  color: var(--gray);
+  width: 0.6rem;
+}
+
+.lang-toggle-slash {
+  font-size: 0.5rem;
+  color: var(--white);
+}

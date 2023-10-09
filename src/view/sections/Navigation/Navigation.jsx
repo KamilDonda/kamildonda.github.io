@@ -4,6 +4,7 @@ import { Linkedin } from "../../components/image_button/Linkedin";
 import EmailIcon from "@mui/icons-material/Email";
 import { ImageButton } from "../../components/image_button/ImageButton";
 import { DarkModeToggle } from "../../components/dark_mode_toggle/DarkModeToggle";
+import { LangToggle } from "../../components/lang_toggle/LangToggle";
 
 export function Navigation() {
   return (
@@ -26,9 +27,12 @@ export function Navigation() {
             text="dondakamil@gmail.com"
           />
         </div>
-        <DarkModeToggle />
+        <div className="nav-row">
+          <DarkModeToggle />
+          <LangToggle />
+        </div>
       </div>
-      <div className="small-space"></div>
+      <div className="big-space"></div>
     </>
   );
 }

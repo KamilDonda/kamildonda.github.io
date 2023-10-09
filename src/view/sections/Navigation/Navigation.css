@@ -2,7 +2,17 @@
   height: 2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: calc(100% - var(--margin) * 2);
+  background-image: linear-gradient(180deg, var(--dark), var(--dark90), var(--dark70));
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 }
 .nav-row {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+}
+.nav-row > * {
+  display: flex;
 }
