@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 export function Timeline() {
   const { t } = useTranslation();
   const [width, setWidth] = useState(window.innerWidth);
-  console.log(width);
+
   const handleResize = () => {
     setWidth(window.innerWidth);
   };
