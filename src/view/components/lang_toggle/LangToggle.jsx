@@ -28,15 +28,18 @@ export function LangToggle() {
   const [language, setLanguage] = useLanguageState(defaultLanguage());
 
   const switchLanguage = () => {
+    console.log("switchLanguage: from: " + language);
     const newLanguage = language === EN ? PL : EN;
     setLanguage(newLanguage);
     document.documentElement.lang = newLanguage;
     i18n.changeLanguage(newLanguage);
+    console.log("switchLanguage: to: " + newLanguage);
   };
 
   useEffect(() => {
     document.documentElement.lang = language;
     i18n.changeLanguage(language);
+    console.log("useEffect: to: " + language);
   }, [language, i18n]);
 
   const className = (lang) => {
