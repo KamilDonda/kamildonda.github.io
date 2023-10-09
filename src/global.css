@@ -9,6 +9,8 @@
   --gold: #ce9428;
   --gray: #686868;
   --dark: #fafafa;
+  --dark90: #fafafae6;
+  --dark70: #fafafab3;
   --button-hover: rgba(0, 0, 0, 0.1);
 }
 /* @media (prefers-color-scheme: light) {
@@ -34,6 +36,8 @@
   --gold: #a6761b;
   --gray: #888888;
   --dark: #222831;
+  --dark90: #222831e6;
+  --dark70: #222831b3;
   --button-hover: rgba(255, 255, 255, 0.1);
 }
 * {
