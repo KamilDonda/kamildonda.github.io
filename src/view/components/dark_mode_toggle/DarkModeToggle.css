@@ -5,7 +5,7 @@
   transform: scale(var(--toggle-scale));
   width: min-content;
   height: min-content;
-  margin-right: -5px;
+  /* margin-right: -5px; */
 }
 @media (max-width: 1200px) {
   :root {
@@ -24,12 +24,12 @@
 }
 @media (max-width: 600px) {
   .toggle {
-    margin-top: -0.5rem;
+    /* margin-top: -0.5rem; */
   }
 }
 @media (max-width: 350px) {
   .toggle {
-    margin-top: -0.6rem;
+    /* margin-top: -0.6rem; */
   }
 }
 @media (max-width: 300px) {
@@ -37,6 +37,6 @@
     --toggle-scale: 0.4;
   }
   .toggle {
-    margin-top: -1rem;
+    /* margin-top: -1rem; */
   }
 }

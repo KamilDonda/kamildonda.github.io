@@ -2,7 +2,12 @@
   height: 2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .nav-row {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+}
+.nav-row > * {
+  display: flex;
 }
