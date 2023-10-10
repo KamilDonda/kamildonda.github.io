@@ -9,7 +9,7 @@
 }
 
 .image-button span {
-  font-size: max(0.35rem, 7px);
+  font-size: max(0.35rem, 11px);
   color: var(--white);
   font-family: lato, Lato, "Lato", "Barlow Condensed", sans-serif;
   font-weight: 500;
@@ -19,5 +19,5 @@
 .image-button svg,
 .image-button img {
   margin: 0 !important;
-  width: max(0.5rem, 10px);
+  width: max(0.5rem, 11px);
 }

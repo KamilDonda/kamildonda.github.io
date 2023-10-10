@@ -18,19 +18,19 @@
 }
 
 .lang-toggle-active {
-  font-size: 0.5rem;
+  font-size: max(0.5rem, 11px);
   font-weight: 500;
   color: var(--gold);
-  width: 0.6rem;
+  width: max(0.5rem, 15px);
 }
 
 .lang-toggle-inactive {
-  font-size: 0.425rem;
+  font-size: max(0.425rem, 8px);
   color: var(--gray);
-  width: 0.6rem;
+  width: max(0.5rem, 15px);
 }
 
 .lang-toggle-slash {
-  font-size: 0.5rem;
+  font-size: max(0.5rem, 11px);
   color: var(--white);
 }
