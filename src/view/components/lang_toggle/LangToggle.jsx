@@ -2,7 +2,6 @@ import "./LangToggle.css";
 import { useTranslation } from "react-i18next";
 import React, { useEffect } from "react";
 import createPersistedState from "use-persisted-state";
-import { set } from "immutable";
 
 const useLanguageState = createPersistedState("language");
 
@@ -40,14 +39,14 @@ export function LangToggle() {
   window.onload = function () {
     document.documentElement.lang = language;
     i18n.changeLanguage(language);
-    console.log("onload: to: " + language);
+    // console.log("onload: to: " + language);
   };
 
   useEffect(() => {
     document.documentElement.lang = language;
     i18n.changeLanguage(language);
-    console.log("useEffect: to: " + language);
-  }, [language, i18n]);
+    // console.log("useEffect: to: " + language);
+  });
 
   const className = (lang) => {
     return language === lang ? ACTIVE : INACTIVE;
