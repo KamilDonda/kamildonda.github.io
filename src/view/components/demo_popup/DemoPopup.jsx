@@ -10,7 +10,7 @@ export function DemoPopup({ id, src, title, demo, onClick }) {
       <iframe id={id} src={src} title={title}></iframe>
       <div className="background-back-button">
         <IconButton onClick={onClick} className="rotate-button">
-          <ArrowBackIcon />
+          <ArrowBackIcon className="back-button"/>
           <span className="back-button">{t("go_back")}</span>
         </IconButton>
       </div>
