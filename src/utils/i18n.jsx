@@ -19,7 +19,7 @@ i18n.use(initReactI18next).init({
         education: "Education",
         projects: "Projects",
         about_text:
-          "I'm 24 years old. I study IT at the Silesian University of Technology. I had my first IT experiences in high school. At first I learned C++, but I liked Kotlin and I developed in this area. Currently I'm improving my skills in Flutter/Dart and Python.",
+          "I'm {{age}} years old. I study IT at the Silesian University of Technology. I had my first IT experiences in high school. At first I learned C++, but I liked Kotlin and I developed in this area. Currently I'm improving my skills in Flutter/Dart and Python.",
         hobbies_text:
           "Calisthenics, chess, team sports, IOT, Raspberry Pi, Arduino, DIY, security, movies and series",
         education_high_school: "High school",
@@ -76,7 +76,7 @@ i18n.use(initReactI18next).init({
         education: "Wykształcenie",
         projects: "Moje projekty",
         about_text:
-          "Mam 24 lata. Studiuję informatykę na Politechnice Śląskiej. Pierwsze kroki związane z informatyką podjąłem w liceum. Na początku uczyłem się C++, ale spodobał mi się Kotlin i zacząłem się w tym kierunku rozwijać. Obecnie doskonalę swoje umiejętności w technologii Flutter/Dart oraz Python.",
+          "Mam {{age}} lat. Studiuję informatykę na Politechnice Śląskiej. Pierwsze kroki związane z informatyką podjąłem w liceum. Na początku uczyłem się C++, ale spodobał mi się Kotlin i zacząłem się w tym kierunku rozwijać. Obecnie doskonalę swoje umiejętności w technologii Flutter/Dart oraz Python.",
         hobbies_text:
           "Szachy, kalistenika, sporty zespołowe, IOT, Raspberry Pi, Arduino, majsterkowanie, filmy, seriale",
         education_high_school: "Szkoła średnia",

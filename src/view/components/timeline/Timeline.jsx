@@ -41,8 +41,8 @@ export function Timeline() {
     },
   ];
 
-  const itemList = items.map((item) => (
-    <div className="timeline-item">
+  const itemList = items.map((item, itemIndex) => (
+    <div className="timeline-item" key={`timeline-item${itemIndex}`}>
       <span
         className={
           item.isDot
@@ -53,7 +53,7 @@ export function Timeline() {
         {item.year}
       </span>
       {item.isDot ? (
-        <span class={`dot bg-gold ${item.isEmpty ? "isEmpty" : null}`}></span>
+        <span className={`dot bg-gold ${item.isEmpty ? "isEmpty" : null}`}></span>
       ) : (
         <div className="no-dot"></div>
       )}
@@ -63,15 +63,15 @@ export function Timeline() {
   function dashedLine() {
     return (
       <div className="dashed-container">
-        {[...Array(10)].map((_, __) => (
-          <div className="dashed-line"></div>
+        {[...Array(10)].map((_, itemIndex) => (
+          <div className="dashed-line" key={`dashed-container${itemIndex}`}></div>
         ))}
       </div>
     );
   }
 
-  const descriptionList = descriptions.map((item) => (
-    <div className="description-item">
+  const descriptionList = descriptions.map((item, itemIndex) => (
+    <div className="description-item" key={`description-item${itemIndex}`}>
       <span className="description-title">{item.title}</span>
       <span className="description-text gray">{item.text}</span>
     </div>

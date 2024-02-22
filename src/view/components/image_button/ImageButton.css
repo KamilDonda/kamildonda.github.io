@@ -11,13 +11,20 @@
 .image-button span {
   font-size: max(0.35rem, 11px);
   color: var(--white);
-  font-family: lato, Lato, "Lato", "Barlow Condensed", sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   font-weight: 500;
   padding: 0.2rem;
+  letter-spacing: 1px;
 }
 
 .image-button svg,
 .image-button img {
   margin: 0 !important;
   width: max(0.5rem, 11px);
+}
+
+@media (max-width: 300px) {
+  .image-button span  {
+    letter-spacing: 0.25px;
+  }
 }
