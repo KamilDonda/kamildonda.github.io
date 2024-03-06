@@ -23,7 +23,7 @@ export function Timeline() {
     { year: 2021 },
     { year: 2022, isDot: true },
     { year: 2023 },
-    { year: 2024, isDot: true, isEmpty: true },
+    { year: 2024, isDot: true, isEmpty: false },
   ];
 
   const descriptions = [
@@ -77,7 +77,7 @@ export function Timeline() {
     </div>
   ));
 
-  var vertical = width < 1000;
+  var vertical = width <= 1000;
 
   return (
     <div className="timeline">
@@ -87,13 +87,13 @@ export function Timeline() {
       <div className="timeline-container">
         {vertical ? (
           <>
-            {dashedLine()}
-            <div className="line"></div>
+            {/* {dashedLine()} */}
+            <div className="line" style={{height: `calc(var(--height) * ${items.length - 1})`}}></div>
           </>
         ) : (
           <>
-            <div className="line"></div>
-            {dashedLine()}
+            <div className="line" style={{width: `calc(var(--width) * ${items.length - 1})`}}></div>
+            {/* {dashedLine()} */}
           </>
         )}
       </div>

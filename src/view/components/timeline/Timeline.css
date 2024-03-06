@@ -32,10 +32,10 @@
 }
 .line {
   border-top: solid var(--line-size) var(--white);
-  width: calc(var(--width) * 7);
+  /* width: calc(var(--width) * 9); */
   position: relative;
   bottom: calc(var(--dot) / 2);
-  margin-left: calc(var(--width) / 2);
+  /* margin-left: calc(var(--width) / 2); */
   z-index: -1;
 }
 .dashed-container {
@@ -117,7 +117,7 @@
   .line {
     border-left: solid var(--line-size) var(--white);
     width: var(--line-size);
-    height: calc(var(--height) * 7);
+    height: calc(var(--height) * 9);
     margin: 0;
     top: calc(var(--height) / 2 + var(--dot) / 2);
     right: calc(var(--dot) / 2 + 1px);
