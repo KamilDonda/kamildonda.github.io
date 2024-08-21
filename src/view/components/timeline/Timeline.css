@@ -36,7 +36,7 @@
   position: relative;
   bottom: calc(var(--dot) / 2);
   /* margin-left: calc(var(--width) / 2); */
-  z-index: -1;
+  /* z-index: -1; */
 }
 .dashed-container {
   display: flex;
@@ -44,7 +44,7 @@
   width: var(--dashed-width);
   position: relative;
   bottom: calc(var(--dot) / 2);
-  z-index: -1;
+  /* z-index: -1; */
   margin-right: calc((var(--width) + var(--dot)) / 2);
   margin-left: calc(var(--dot) / 2);
 }
@@ -58,6 +58,7 @@
   width: var(--dot);
   border-radius: 50%;
   display: inline-block;
+  z-index: 1;
 }
 .no-dot {
   height: var(--dot);
